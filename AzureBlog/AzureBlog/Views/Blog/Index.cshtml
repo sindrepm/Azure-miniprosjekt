@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AzureBlog.Models.BlogPost>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Blog</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model) {
+    <div>
+        <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+        <p>@Html.DisplayFor(modelItem => item.Body)</p>
+    </div>
+    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+    @Html.ActionLink("Details", "Details", new { id = item.Id })
+    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+}

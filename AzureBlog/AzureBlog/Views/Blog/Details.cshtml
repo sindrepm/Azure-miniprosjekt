@@ -1,0 +1,22 @@
+﻿@model AzureBlog.Models.BlogPost
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h1>@Html.DisplayFor(model => model.Title)</h1>
+    <p>@Html.DisplayFor(model => model.Body)</p>
+</div>
+
+<div>
+    <h2>Legg til kommentar</h2>
+</div>
+
+<h2>Kommentarer:</h2>
+@foreach (var comment in Model.Comments)
+{
+    <div>
+
+    </div>		 
+}

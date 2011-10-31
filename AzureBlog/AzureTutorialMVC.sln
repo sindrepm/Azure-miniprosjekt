@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureTutorialMVC", "AzureTutorialMVC\AzureTutorialMVC.ccproj", "{6DEADB31-64D7-491A-BF70-32B2CEC073BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlog", "AzureBlog\AzureBlog.csproj", "{5856C03C-C92B-44B1-B563-CD8D272C622D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlog.Tests", "AzureBlog.Tests\AzureBlog.Tests.csproj", "{531781CB-AD21-411F-8C09-1EA821A9AC00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DEADB31-64D7-491A-BF70-32B2CEC073BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEADB31-64D7-491A-BF70-32B2CEC073BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEADB31-64D7-491A-BF70-32B2CEC073BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEADB31-64D7-491A-BF70-32B2CEC073BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5856C03C-C92B-44B1-B563-CD8D272C622D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5856C03C-C92B-44B1-B563-CD8D272C622D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5856C03C-C92B-44B1-B563-CD8D272C622D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5856C03C-C92B-44B1-B563-CD8D272C622D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531781CB-AD21-411F-8C09-1EA821A9AC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531781CB-AD21-411F-8C09-1EA821A9AC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531781CB-AD21-411F-8C09-1EA821A9AC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531781CB-AD21-411F-8C09-1EA821A9AC00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
