@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
@@ -8,25 +8,28 @@
     <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
 </head>
 <body>
+    <header>
+        <h1><a href="@Url.Action("Index", "Home")">Mesan: Azure Blog</a></h1>
+        <nav>
+            <ul id="menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.Partial("_LogOnPartial")</li>
+            </ul>
+        </nav>
+    </header>
     <div class="page">
-        <header>
-            <div id="title">
-                <h1>My MVC Application</h1>
-            </div>
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
-            <nav>
-                <ul id="menu">
-                    <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
-                </ul>
-            </nav>
-        </header>
         <section id="main">
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas faucibus massa vel porttitor. Nulla sed lectus purus. Curabitur semper sagittis purus vel dictum. Sed id magna odio. Praesent felis mi, condimentum quis egestas vulputate, luctus sed mi. Etiam volutpat gravida mauris, vel blandit sem sodales et. Curabitur eu nisi quis magna eleifend ullamcorper id quis neque. Cras hendrerit, nisl et mattis tempor, diam erat tincidunt enim, eget consectetur libero nisl ut ipsum. Ut accumsan nibh nec lacus viverra facilisis sollicitudin justo mollis. Nullam egestas rhoncus sapien, ut dapibus velit rutrum vitae. Phasellus id nunc nulla. Aenean tempus tincidunt libero a euismod. Vivamus sed quam nec metus dapibus vestibulum. Ut id neque non ligula iaculis varius at sed mauris. Phasellus diam elit, sodales vel tempus faucibus, auctor quis odio. Ut consequat dui turpis.
+            </p>
+            <p>
+                Mauris euismod luctus sapien, rhoncus viverra nibh gravida non. Nulla cursus odio id magna consequat vitae scelerisque orci semper. Vestibulum ut nisl lacus. Nullam ac risus eu ligula aliquet interdum sit amet eu tortor. Nulla ipsum mi, laoreet nec pulvinar ut, placerat id est. Aliquam erat volutpat. Quisque auctor, elit vitae sollicitudin gravida, turpis sem suscipit lorem, et lobortis ante est quis metus. Etiam eget lacus non libero commodo sodales at et dolor. Ut eget leo diam, sit amet luctus nisl. In venenatis augue vitae neque elementum vitae placerat arcu vehicula.
+            </p>
+
             @RenderBody()
         </section>
-        <footer>
-        </footer>
     </div>
 </body>
 </html>

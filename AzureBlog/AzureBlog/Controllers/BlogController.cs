@@ -5,20 +5,32 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AzureBlog.Models;
+using AzureBlog.Model.Infrastructure;
+using AzureBlog.Model.Repository.Abstracts;
+using AzureBlog.Model.Entities;
 
 namespace AzureBlog.Controllers
 { 
     public class BlogController : Controller
     {
-        private AzureBlogContext db = new AzureBlogContext();
+        private IUnitOfWork _unitOfWork;
+        private IBlogRepository _repository;
+
+        public BlogController(IBlogRepository repository, IUnitOfWork unitOfWork)
+        {
+            this._repository = repository;
+            this._unitOfWork = unitOfWork;
+        }
+
 
         //
         // GET: /Blog/
 
         public ViewResult Index()
         {
-            return View(db.Posts.ToList());
+            var posts = _repository.GetAll();
+
+            return View(posts);
         }
 
         //
@@ -26,7 +38,8 @@ namespace AzureBlog.Controllers
 
         public ViewResult Details(int id)
         {
-            BlogPost blogpost = db.Posts.Find(id);
+            var blogpost = _repository.GetById(id);
+            
             return View(blogpost);
         }
 
@@ -46,8 +59,9 @@ namespace AzureBlog.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Posts.Add(blogpost);
-                db.SaveChanges();
+                _repository.Add(blogpost);
+                _unitOfWork.Commit();
+                
                 return RedirectToAction("Index");  
             }
 
@@ -59,8 +73,10 @@ namespace AzureBlog.Controllers
  
         public ActionResult Edit(int id)
         {
-            BlogPost blogpost = db.Posts.Find(id);
-            return View(blogpost);
+            //BlogPost blogpost = db.Posts.Find(id);
+            //return View(blogpost);
+
+            return View();
         }
 
         //
@@ -71,8 +87,8 @@ namespace AzureBlog.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(blogpost).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(blogpost).State = EntityState.Modified;
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(blogpost);
@@ -83,8 +99,9 @@ namespace AzureBlog.Controllers
  
         public ActionResult Delete(int id)
         {
-            BlogPost blogpost = db.Posts.Find(id);
-            return View(blogpost);
+            //BlogPost blogpost = db.Posts.Find(id);
+            //return View(blogpost);
+            return View();
         }
 
         //
@@ -93,15 +110,15 @@ namespace AzureBlog.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            BlogPost blogpost = db.Posts.Find(id);
-            db.Posts.Remove(blogpost);
-            db.SaveChanges();
+            //BlogPost blogpost = db.Posts.Find(id);
+            //db.Posts.Remove(blogpost);
+            //db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            //_unitOfWork.
             base.Dispose(disposing);
         }
     }

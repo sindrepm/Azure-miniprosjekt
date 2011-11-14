@@ -23,5 +23,6 @@
     <Imports>
       <Import moduleName="Diagnostics" />
     </Imports>
+    <LocalResources></LocalResources>
   </WebRole>
 </ServiceDefinition>
