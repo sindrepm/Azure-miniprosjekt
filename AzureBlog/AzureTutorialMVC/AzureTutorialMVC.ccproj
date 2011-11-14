@@ -37,6 +37,14 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AzureBlog.TagCloudService\AzureBlog.TagCloudService.csproj">
+      <Name>AzureBlog.TagCloudService</Name>
+      <Project>{acd0e1af-8ab6-45f6-afaf-db9a7e9c51b2}</Project>
+      <Private>True</Private>
+      <RoleType>Worker</RoleType>
+      <RoleName>AzureBlog.TagCloudService</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
     <ProjectReference Include="..\AzureBlog\AzureBlog.csproj">
       <Name>AzureBlog</Name>
       <Project>{5856c03c-c92b-44b1-b563-cd8d272c622d}</Project>

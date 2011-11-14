@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlog.Tests", "AzureBlo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlog.Model", "AzureBlog.Model\AzureBlog.Model.csproj", "{4A9FD1B5-417E-4D0F-80FE-8930AEA512B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlog.TagCloudService", "AzureBlog.TagCloudService\AzureBlog.TagCloudService.csproj", "{ACD0E1AF-8AB6-45F6-AFAF-DB9A7E9C51B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{4A9FD1B5-417E-4D0F-80FE-8930AEA512B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9FD1B5-417E-4D0F-80FE-8930AEA512B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9FD1B5-417E-4D0F-80FE-8930AEA512B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD0E1AF-8AB6-45F6-AFAF-DB9A7E9C51B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD0E1AF-8AB6-45F6-AFAF-DB9A7E9C51B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD0E1AF-8AB6-45F6-AFAF-DB9A7E9C51B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD0E1AF-8AB6-45F6-AFAF-DB9A7E9C51B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

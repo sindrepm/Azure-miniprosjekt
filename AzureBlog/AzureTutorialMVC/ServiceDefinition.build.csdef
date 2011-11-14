@@ -25,4 +25,13 @@
     </Imports>
     <LocalResources></LocalResources>
   </WebRole>
+  <WorkerRole name="AzureBlog.TagCloudService" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <Endpoints>
+      <InputEndpoint name="TagCloudServiceTcp" protocol="tcp" port="1234" />
+      <InputEndpoint name="TagCloudServiceHttp" protocol="http" port="8080" />
+    </Endpoints>
+  </WorkerRole>
 </ServiceDefinition>
