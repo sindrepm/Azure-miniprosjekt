@@ -12,3 +12,16 @@ D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Debug\AzureBlog.TagCloudService.dll
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Debug\AzureBlog.TagCloudService.pdb
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\AzureBlog.TagCloudService.dll.config
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\AzureBlog.TagCloudService.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\AzureBlog.TagCloudService.pdb
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\AzureBlog.Model.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\AzureBlog.Model.pdb
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\EntityFramework.xml
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\bin\Debug\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Debug\ResolveAssemblyReference.cache
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Debug\AzureBlog.TagCloudService.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Debug\AzureBlog.TagCloudService.pdb
