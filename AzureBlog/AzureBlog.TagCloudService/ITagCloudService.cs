@@ -6,14 +6,14 @@ using System.ServiceModel;
 
 namespace AzureBlog.TagCloudService
 {
-     [ServiceContract]
+    [ServiceContract]
     public interface ITagCloudService
     {
-         /// <summary>
-         /// Returns a list of entries in the tag cloud.
-         /// </summary>
-         /// <returns></returns>
-         [OperationContract]
-         IEnumerable<TagCloudEntry> GetTagCloudEntries();
+        /// <summary>
+        /// Returns a list of entries in the tag cloud.
+        /// </summary>
+        /// <returns></returns>
+        [OperationContract]
+        IEnumerable<TagCloudEntry> GetTagCloudEntries();
     }
 }

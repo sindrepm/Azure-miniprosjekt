@@ -16,3 +16,4 @@ D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\ResolveAssemblyReference.cache
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.dll
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.pdb
+D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\AzureBlog.Model.dll.config

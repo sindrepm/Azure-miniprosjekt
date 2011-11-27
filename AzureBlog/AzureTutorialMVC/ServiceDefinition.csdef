@@ -23,7 +23,6 @@
     </Imports>
     <Endpoints>
       <InputEndpoint name="TagCloudServiceTcp" protocol="tcp" port="1234" />
-      <InputEndpoint name="TagCloudServiceHttp" protocol="http" port="8080" />
     </Endpoints>
   </WorkerRole>
 </ServiceDefinition>

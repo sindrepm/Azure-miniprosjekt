@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91d7dbb5-a004-41b9-97f1-8b20c0496b24" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:1234/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="068a8671-5ca8-44b3-afb0-621cb7b92fbf" SourceId="1" SourceUrl="net.tcp://localhost:1234/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="6c49ea0b-4ae5-4cf0-9963-92c87be25c5b" SourceId="1" SourceUrl="net.tcp://localhost:1234/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4f80b83d-8e23-4521-903e-e7fb603fd6c8" SourceId="1" SourceUrl="net.tcp://localhost:1234/mex" />
+    <MetadataFile FileName="AzureBlog.TagCloudService.xsd" MetadataType="Schema" ID="151dc7f8-5714-466d-b520-75e8a4b57b0b" SourceId="1" SourceUrl="net.tcp://localhost:1234/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

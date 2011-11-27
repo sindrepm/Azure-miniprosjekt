@@ -1,0 +1,30 @@
+﻿@model IList<AzureBlog.Model.TagCloudService.TagCloudEntry>
+
+@{
+    ViewBag.Title = "Tag Cloud";
+}
+
+@helper RenderTag(AzureBlog.Model.TagCloudService.TagCloudEntry tagEntry){
+    var pt = 24 * tagEntry.Weight;
+    if (pt < 8) { 
+        pt = 8;
+    }
+
+    @Html.Raw(string.Format(System.Globalization.CultureInfo.InvariantCulture, "<li style=\"font-size:{0:0.0}px\">{1}</li>", pt, tagEntry.Tag));
+}
+
+<h2>Tag Cloud</h2>
+
+@if (!Model.Any())
+{ 
+<p>No tags found!</p>
+}
+else
+{ 
+<ul>
+@foreach (var tag in Model)
+{ 
+    @RenderTag(tag)
+}
+</ul>
+}

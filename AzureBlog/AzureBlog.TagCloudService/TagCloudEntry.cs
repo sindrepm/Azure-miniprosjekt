@@ -10,7 +10,7 @@ namespace AzureBlog.TagCloudService
     public class TagCloudEntry
     {
         [DataMember]
-        public AzureBlog.Model.Entities.Tag Tag { get; set; }
+        public string Tag { get; set; }
         /// <summary>
         /// Between 0-1.
         /// </summary>

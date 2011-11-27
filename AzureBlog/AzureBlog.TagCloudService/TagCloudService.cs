@@ -17,14 +17,16 @@ namespace AzureBlog.TagCloudService
          IncludeExceptionDetailInFaults = false,
 #endif
  AddressFilterMode = AddressFilterMode.Any)]
-    class TagCloudService : ITagCloudService
+    public class TagCloudService : ITagCloudService
     {
         public IEnumerable<TagCloudEntry> GetTagCloudEntries()
         {
-            var context = new AzureBlogContext();
-            var tagCloudGenerator = new TagCloudGenerator(new TagRepository(context));
+            using (var context = new AzureBlogContext())
+            {
+                var tagCloudGenerator = new TagCloudGenerator(new TagRepository(context));
 
-            return tagCloudGenerator.GetEntries();
+                return tagCloudGenerator.GetEntries().ToList();
+            }
         }
 
     }

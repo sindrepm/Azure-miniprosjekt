@@ -116,6 +116,13 @@ namespace AzureBlog.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult TagCloud()
+        {
+            var service = new Model.Service.Concrete.TagService();
+            var tagCloud = service.GetTagCloud();
+            return View(tagCloud);
+        }
+
         protected override void Dispose(bool disposing)
         {
             //_unitOfWork.

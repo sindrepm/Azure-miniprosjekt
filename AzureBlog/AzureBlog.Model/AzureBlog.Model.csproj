@@ -38,6 +38,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\AzureBlog\bin\System.Web.Mvc.dll</HintPath>
@@ -71,14 +73,52 @@
     <Compile Include="Repository\Concrete\BlogRepository.cs" />
     <Compile Include="Repository\Concrete\CommentRepository.cs" />
     <Compile Include="Repository\Concrete\TagRepository.cs" />
+    <Compile Include="Service References\TagCloudService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Abstracts\ITagService.cs" />
+    <Compile Include="Service\Concrete\TagService.cs" />
     <Compile Include="Service\Concrete\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Service\Abstracts\" />
     <Folder Include="Specification\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Service References\TagCloudService\AzureBlog.Model.TagCloudService.TagCloudEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TagCloudService\AzureBlog.TagCloudService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagCloudService\service.wsdl" />
+    <None Include="Service References\TagCloudService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TagCloudService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TagCloudService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagCloudService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagCloudService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TagCloudService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

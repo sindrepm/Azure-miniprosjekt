@@ -52,6 +52,7 @@
     <Reference Include="Microsoft.WindowsAzure.ServiceRuntime" />
     <Reference Include="Microsoft.WindowsAzure.StorageClient" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -199,6 +200,9 @@
       <Project>{4A9FD1B5-417E-4D0F-80FE-8930AEA512B7}</Project>
       <Name>AzureBlog.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\TagCloud.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

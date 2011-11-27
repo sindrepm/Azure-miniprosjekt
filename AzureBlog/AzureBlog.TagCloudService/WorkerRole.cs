@@ -11,6 +11,7 @@ using Microsoft.WindowsAzure.StorageClient;
 using AzureBlog.Model.Repository.Concrete;
 using AzureBlog.Model;
 using System.ServiceModel;
+using System.ServiceModel.Description;
 
 namespace AzureBlog.TagCloudService
 {
@@ -30,6 +31,44 @@ namespace AzureBlog.TagCloudService
             }
         }
 
+        public override bool OnStart()
+        {
+            // Set the maximum number of concurrent connections 
+            ServicePointManager.DefaultConnectionLimit = 12;
+
+            StartTagCloudServiceHost(3);
+
+            // For information on handling configuration changes
+            // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
+
+            return base.OnStart();
+        }
+
+        private ServiceHost CreateServiceHost()
+        {
+
+            RoleInstanceEndpoint externalEndPointTcp = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["TagCloudServiceTcp"];
+            var serviceHost = new ServiceHost(typeof(TagCloudService),new Uri(String.Format("net.tcp://{0}", externalEndPointTcp.IPEndpoint)));
+            
+
+            ServiceMetadataBehavior behavior = new ServiceMetadataBehavior();
+            
+            //behavior.HttpGetEnabled = true;
+
+            serviceHost.Description.Behaviors.Add(behavior);
+            return serviceHost;
+        }
+
+        private void AddEndPoints(ServiceHost serviceHost)
+        {
+            NetTcpBinding tcpBinding = new NetTcpBinding(SecurityMode.None);
+
+            serviceHost.AddServiceEndpoint(typeof(ITagCloudService), tcpBinding, "TagCloudService");
+
+            serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
+
+        }
+
         /// <summary>
         /// Starts the internal and external endpoint for the WCF service hosting the compute instance.
         /// </summary>
@@ -43,8 +82,12 @@ namespace AzureBlog.TagCloudService
                 RoleEnvironment.RequestRecycle();
                 return;
             }
+
             Trace.TraceInformation("Starting TagCloud service host...");
-            _serviceHost = new ServiceHost(typeof(TagCloudService));
+
+            _serviceHost = CreateServiceHost();
+            AddEndPoints(_serviceHost);
+
             // Recover the service in case of failure. 
             // Log the fault and attempt to restart the service host. 
             _serviceHost.Faulted += (sender, e) =>
@@ -53,23 +96,7 @@ namespace AzureBlog.TagCloudService
                 this._serviceHost.Abort();
                 this.StartTagCloudServiceHost(--retries);
             };
-            // use NetTcpBinding with no security
-            NetTcpBinding tcpBinding = new NetTcpBinding(SecurityMode.None);
-            // define an external endpoint for client traffic
-            RoleInstanceEndpoint externalEndPointTcp = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["TagCloudServiceTcp"];
-            RoleInstanceEndpoint externalEndPointHttp = RoleEnvironment.CurrentRoleInstance.InstanceEndpoints["TagCloudServiceHttp"];
-            _serviceHost.AddServiceEndpoint(
-               typeof(ITagCloudService),
-               tcpBinding,
-               String.Format("net.tcp://{0}/TagCloudService", externalEndPointTcp.IPEndpoint)
-            );
-
-            BasicHttpBinding httpBinding = new BasicHttpBinding(BasicHttpSecurityMode.None);
-            _serviceHost.AddServiceEndpoint(
-                typeof(ITagCloudService),
-                httpBinding,
-                string.Format("http://{0}", externalEndPointHttp.IPEndpoint));
-
+           
             try
             {
                 _serviceHost.Open();
@@ -85,17 +112,5 @@ namespace AzureBlog.TagCloudService
             }
         }
 
-        public override bool OnStart()
-        {
-            // Set the maximum number of concurrent connections 
-            ServicePointManager.DefaultConnectionLimit = 12;
-
-            StartTagCloudServiceHost(3);
-
-            // For information on handling configuration changes
-            // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
-
-            return base.OnStart();
-        }
     }
 }
