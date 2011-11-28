@@ -38,6 +38,8 @@ namespace AzureBlog
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine());
 
+            //var tmp = Database.DefaultConnectionFactory.CreateConnection("DefaultConnection11");
+
             // Set custom database initializer
             Database.SetInitializer<AzureBlogContext>(new DropCreateDatabaseIfModelChanges<AzureBlogContext>());
 

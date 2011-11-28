@@ -17,3 +17,12 @@ D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.dll
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.pdb
 D:\Dokumenter\Visual Studio 2010\Projects\Azure-miniprosjekt\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\AzureBlog.Model.dll.config
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\AzureBlog.Model.dll.config
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\AzureBlog.Model.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\AzureBlog.Model.pdb
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\System.Web.WebPages.dll
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\System.Web.WebPages.xml
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Debug\AzureBlog.Model.pdb
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\bin\Debug\System.Data.Entity.dll

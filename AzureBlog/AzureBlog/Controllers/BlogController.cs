@@ -11,6 +11,7 @@ using AzureBlog.Model.Entities;
 
 namespace AzureBlog.Controllers
 { 
+    
     public class BlogController : Controller
     {
         private IUnitOfWork _unitOfWork;
@@ -60,6 +61,7 @@ namespace AzureBlog.Controllers
             if (ModelState.IsValid)
             {
                 _repository.Add(blogpost);
+
                 _unitOfWork.Commit();
                 
                 return RedirectToAction("Index");  

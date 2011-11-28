@@ -9,20 +9,18 @@
   **********************************************************************************************
 -->
 <ServiceDefinition name="AzureTutorialMVC" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
-  <WebRole name="AzureBlog" vmsize="Small">
-    <!--<Sites>
+  <WebRole name="AzureBlog" vmsize="Small" enableNativeCodeExecution="true">
+    <Sites>
       <Site name="Web">
         <Bindings>
           <Binding name="Endpoint1" endpointName="Endpoint1" />
         </Bindings>
       </Site>
-    </Sites>-->
+    </Sites>
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
-    <Imports>
-      <Import moduleName="Diagnostics" />
-    </Imports>
+    <Imports></Imports>
     <LocalResources></LocalResources>
   </WebRole>
   <WorkerRole name="AzureBlog.TagCloudService" vmsize="Small">

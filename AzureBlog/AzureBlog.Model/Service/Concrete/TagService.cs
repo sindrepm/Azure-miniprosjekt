@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using AzureBlog.Model.Service.Abstracts;
 using System.ServiceModel;
+using Microsoft.WindowsAzure.ServiceRuntime;
 
 namespace AzureBlog.Model.Service.Concrete
 {
@@ -11,7 +12,13 @@ namespace AzureBlog.Model.Service.Concrete
     {
         public IList<TagCloudService.TagCloudEntry> GetTagCloud()
         {
-            var client = new TagCloudService.TagCloudServiceClient(new NetTcpBinding(SecurityMode.None), new EndpointAddress("net.tcp://127.255.0.1:1234/TagCloudService"));
+            var client = 
+                new TagCloudService.TagCloudServiceClient(
+                    new NetTcpBinding(SecurityMode.None), 
+                    new EndpointAddress(
+                        string.Format(
+                            "net.tcp://65.52.137.69:1234/TagCloudService")));
+
             return client.GetTagCloudEntries();
         }
     }

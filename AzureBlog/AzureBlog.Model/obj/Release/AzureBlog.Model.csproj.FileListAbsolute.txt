@@ -1,0 +1,1 @@
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.Model\obj\Release\ResolveAssemblyReference.cache

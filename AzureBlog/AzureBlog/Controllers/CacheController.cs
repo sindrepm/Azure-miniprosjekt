@@ -39,6 +39,7 @@ namespace AzureBlog.Controllers
             {
                 cache.Put("Time", DateTime.Now);
             }
+            
 
             list.Add(new CacheEntryViewModel()
             {

@@ -8,6 +8,12 @@ namespace AzureBlog.Model.Entities
 {
     public class BlogPost
     {
+        public BlogPost()
+        {
+            AddedDate = DateTime.Now;
+            //LastModifiedDate = DateTime.Now;
+        }
+
         public int Id { get; set; }
 
         [Required(ErrorMessage="Tittel må være utfylt")]
@@ -21,10 +27,10 @@ namespace AzureBlog.Model.Entities
         public string MetaDescription { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
+        //[DataType(DataType.DateTime)]
         public DateTime AddedDate { get; set; }
         
-        public DateTime LastModifiedDate { get; set; }
+        public DateTime? LastModifiedDate { get; set; }
 
         [Required]
         public Guid UserId { get; set; }

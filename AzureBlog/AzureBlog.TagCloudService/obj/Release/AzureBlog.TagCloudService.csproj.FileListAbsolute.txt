@@ -1,0 +1,1 @@
+C:\Source\Git\Azure-miniprosjekt\AzureBlog\AzureBlog.TagCloudService\obj\Release\ResolveAssemblyReference.cache
